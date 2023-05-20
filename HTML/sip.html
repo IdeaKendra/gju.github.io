@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="sipcss.css">
+        <link rel="stylesheet" href="school.css">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <script type="text/javascript" src="sipjs.js"></script>
+    </head>
+    <body class="body-background">
+        <header style="background-color: #1d1b31;" class="text-gray-600 body-font ">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span style="color: #fff;" class="ml-3 text-xl">Stockराम</span>
+              </a>
+              <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a style="color: #fff;" href="school.html"class="mr-5 hover:text-gray-900">Stock Market</a>
+                <a style="color: #fff;" href="sip.html" class="mr-5 hover:text-gray-900">Calculator</a>
+                <a style="color: #fff;" href="news.html" class="mr-5 hover:text-gray-900">News</a>
+                <a style="color: #fff;" href="index.html"class="mr-5 hover:text-gray-900">Home</a>
+              </nav>
+            </div>
+          </header>
+        <div class="header">Mutual Fund Investment Calculator</div>
+        <div class="page-container">
+            <div class="switch-container">
+                <div class="radio-button">
+                    <label for="sip">SIP</label>
+                    <input type="radio" checked name="checked" value="SIP">
+                    <label for="lumpsum">LumpSum</label>
+                    <input type="radio" name="checked" value="LumpSum">
+                </div>
+        </div>
+            <div class="input-container">
+                <div>
+                    <div>Monthly Investment &#10067 </div>
+                    <br/>
+                    <div><input id="investment" type="text" onchange="commas(this)"/></div>
+                    <br/>
+                    <div>Number of Years &#10067</div>
+                    <br/>
+                    <div><input id="years" type="number"></div>
+                    <br/>
+                    <div>Expected Rate of Return &#10067</div>
+                    <br/>
+                    <div><input id="return-rate"  type="text" onchange="percentage(this)")/></div>
+                </div>
+            </div>
+            </br/>
+            <div class="btn-calculate">
+                <button type="button" onclick="calculateResult()">
+                    Calculate
+                </button>
+            </div>
+            </br/>
+            <div style="display: flex;">
+                <div class="result">Result :</div>
+              <div class="result-container">
+                    <div>Monthly Investment for <span id="mode-1">SIP</span></div>
+                    <br/>
+                    <div><span>Rs.</span>&nbsp;<span id="input-1"></span></div>
+                    <br/>
+                    <div>Number of Years <span id="mode-2">SIP</span></div>
+                    <br/>
+                    <div><span>Years:</span>&nbsp;<span id="input-2"></span></div>
+                    <br/>
+                    <div>Expected Rate of Return <span id="mode-3">SIP</span></div>
+                    <br/>
+                    <div><span>%:</span>&nbsp;<span id="input-3"></span></div>
+            </div>
+            <div class="result-container">
+                <div>Total Investment 💸</div>
+                <br/>
+                <div><span id="currency-change-1">Rs.</span>&nbsp;<span id="total"></span></div>
+                <br/>
+                <div>Wealth Gained 💸</div>
+                <br/>
+                <div><span id="currency-change-2">Rs.</span>&nbsp;<span id="wealth-gained"></span></div>
+                <br/>
+                <div>Maturity Value 💸</div>
+                <br/>
+                <div><span id="currency-change-3">Rs.</span>&nbsp;<span id="maturity-value"></span></div>
+        </div>
+    </div>
+            <br/>
+           
+        </div>
+    </div>
+    </body>
+</html>

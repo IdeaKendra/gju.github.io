@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="school.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Stockराम</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="school.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Terminoly Of Market</span>
+        </a>
+         <span class="tooltip">Terminoly Of Market</span>
+      </li>
+      <li>
+        <a href="lesson1.html">
+          <i class='bx bx-book' ></i>
+          <span class="links_name">Shares</span>
+        </a>
+        <span class="tooltip">Shares</span>
+      </li>
+      <li>
+        <a href="lesson6.html">
+          <i class='bx bx-book' ></i>
+          <span class="links_name">Types Of Investment</span>
+        </a>
+        <span class="tooltip">Investment</span>
+      </li>
+      <li>
+        <a href="lesson7.html">
+          <i class='bx bx-book' ></i>
+          <span class="links_name">Prer. for Investment</span>
+        </a>
+        <span class="tooltip">Prerequisite for Investment</span>
+      </li>
+      <li>
+        <a href="lesson5.html">
+          <i class='bx bx-cart-alt' ></i>
+          <span class="links_name">Choosing A Stock</span>
+        </a>
+        <span class="tooltip">Stock</span>
+      </li>
+      <li>
+        <a href="lesson8.html">
+          <i class='bx bx-box' ></i>
+          <span class="links_name">Brokerage Apps</span>
+        </a>
+        <span class="tooltip">Brokerage Apps</span>
+      </li>
+      <li>
+        <a href="lesson4.html">
+          <i class='bx bx-book' ></i>
+          <span class="links_name">IPOs</span>
+        </a>
+        <span class="tooltip">IPOs</span>
+      </li>
+      <li>
+        <a href="lesson3.html">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="links_name">Mutual Funds</span>
+        </a>
+        <span class="tooltip">Mutual Funds</span>
+      </li>
+      <li>
+        <a href="lesson9.html">
+          <i class='bx bx-book' ></i>
+          <span class="links_name">ETFs</span>
+        </a>
+        <span class="tooltip">Exchange Traded Funds</span>
+      </li>
+     <li>
+       <a href="lesson2.html">
+         <i class='bx bx-book' ></i>
+         <span class="links_name">Bonds</span>
+       </a>
+       <span class="tooltip">Bonds</span>
+     </li>
+     <li>
+       <a href="index.html">
+         <i class='bx bx-home' ></i>
+         <span class="links_name">Home</span>
+       </a>
+       <span class="tooltip">Home</span>
+     </li>
+    </ul>
+  </div>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+      <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0"><b>
+        <h1 class="title-font font-medium text-3xl text-gray-900">Basic Terminoly Of Market</h1></b>
+        <img src="d1.JPG">
+        <img src="2.JPG">
+        <img src="3.JPG">
+        <img src="4.JPG">
+      </div>
+    </div>
+  </section>
+  <section class="vid"> 
+    <div style="text-align: center;">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Video To Explain It Briefly..</h1>
+      <iframe width="560" height="315" class="video"
+        src="https://www.youtube.com/embed/8RPTn7ZBsG8">
+      </iframe>
+    </div>
+  </section>
+  <section class="vid"> 
+    <div style="text-align: center;">
+      <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+      <iframe width="560" height="315" class="video"
+        src="https://www.youtube.com/embed/dl0ovMB4Pqw">
+      </iframe>
+    </div>
+  </section>
+
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+ 
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+ 
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+ 
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+</body>
+</html>
